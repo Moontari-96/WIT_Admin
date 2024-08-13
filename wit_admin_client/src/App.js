@@ -42,15 +42,21 @@ function App() {
                     <div className="contents">
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/admin" element={<Admin />} />
-                            <Route path="/board" element={<Board />} />
-                            <Route path="/calendar" element={<Calendar />} />
-                            <Route path="/eApproval" element={<EApproval />} />
+                            <Route path="/admin/*" element={<Admin />} />
+                            <Route path="/board/*" element={<Board />} />
+                            <Route path="/calendar/*" element={<Calendar />} />
                             <Route
-                                path="/management"
+                                path="/eApproval/*"
+                                element={<EApproval />}
+                            />
+                            <Route
+                                path="/management/*"
                                 element={<Management />}
                             />
-                            <Route path="/messenger" element={<Messenger />} />
+                            <Route
+                                path="/messenger/*"
+                                element={<Messenger />}
+                            />
                         </Routes>
                     </div>
                 </div>
